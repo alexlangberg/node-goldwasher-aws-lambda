@@ -50,7 +50,7 @@
   },
   "homepage": "https://github.com/alexlangberg/node-goldwasher-aws-lambda",
   "dependencies": {
-    "goldwasher": "^5.0.2",
+    "goldwasher": "^5.0.3",
     "goldwasher-needle": "^1.1.0"
   }
 }

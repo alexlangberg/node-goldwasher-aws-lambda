@@ -9,9 +9,9 @@ describe('running', function() {
 
   it('can run', function(done) {
     var context = {
-      succeed: function(results) {
-        results.length.should.be.greaterThan(0);
-        results[0].source.should.equal('http://google.com');
+      succeed: function(result) {
+        result.output.length.should.be.greaterThan(0);
+        result.output[0].source.should.equal('http://google.com');
         done();
       }
     };
