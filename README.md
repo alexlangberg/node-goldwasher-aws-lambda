@@ -27,14 +27,14 @@ aws lambda update-function-code --function-name goldwasher --zip-file fileb://go
 ## Options
 The module accepts the usual parameters of [goldwasher-needle](https://www.npmjs.org/package/goldwasher-needle) with the exception that the ```url``` and ```options``` parameters have been merged. This simply means that the first parameter, ```url```, has been removed and must instead be added as a property on the ```options``` parameter:
 ```javascript
-var options = {
+{
   url: 'http://github.com',
   goldwasher: {
     selector: 'h1'
   }
 }
 ```
-See how to use this in the examples below.
+See how to use this in the examples below or simply paste it as a sample event in the AWS console.
 
 ## Build
 If you feel like changing the code and have installed the development dependencies, you can automatically build a new zip file from the main folder:
