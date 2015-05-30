@@ -44,4 +44,37 @@ gulp zip
 This will create a new zip that can be installed with the commands mentioned under *installation*.
 
 ## Example
-On the way...
+In this example we will show how to consume the Lambda function from a client. First, install the [aws-sdk](https://www.npmjs.com/package/aws-sdk):
+
+```npm install aws-sdk```
+
+In this example, we will use a config file for our AWS credentials. Remember to replace the values below with your own. It is *extremely* important that you do *not* push this file to your git repository or any other public place. I highly recommend using [environment variables](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html#Credentials_from_Environment_Variables) instead. I also recommend creating a user on AWS that only has the permission ```AWSLambdaRole``` to run this.
+
+```aws-config.json```:
+```javascript
+{ 
+	"accessKeyId": "akid",
+	"secretAccessKey": "secret",
+	"region": "us-east-1"
+}
+```
+
+```example.js```
+```javascript
+var AWS = require('aws-sdk');
+
+AWS.config.loadFromPath('./aws-config.json');
+
+var lambda = new AWS.Lambda();
+
+lambda.invoke({
+	FunctionName: 'goldwasher',
+	Payload: JSON.stringify({url: 'http://google.com'})
+},
+function(error, data) {
+	if (error) {
+		console.error(error);	
+	}
+	console.log(data);
+});
+```
