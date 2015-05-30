@@ -50,7 +50,7 @@ In this example we will show how to consume the Lambda function from a client. F
 
 In this example, we will use a config file for our AWS credentials. Remember to replace the values below with your own. It is *extremely* important that you do *not* push this file to your git repository or any other public place. I highly recommend using [environment variables](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html#Credentials_from_Environment_Variables) instead. I also recommend creating a user on AWS that only has the permission ```AWSLambdaRole``` to run this.
 
-```aws-config.json```:
+**aws-config.json**:
 
 ```javascript
 { 
@@ -60,7 +60,7 @@ In this example, we will use a config file for our AWS credentials. Remember to 
 }
 ```
 
-```example.js```:
+**example.js**:
 
 ```javascript
 var AWS = require('aws-sdk');
