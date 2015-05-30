@@ -34,7 +34,7 @@ var options = {
   }
 }
 ```
-See how to do this in the examples below.
+See how to use this in the examples below.
 
 ## Build
 If you feel like changing the code and have installed the development dependencies, you can automatically build a new zip file from the main folder:
