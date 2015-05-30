@@ -11,7 +11,7 @@
 A version of [goldwasher](https://www.npmjs.org/package/goldwasher) that runs as a module on AWS Lambda. Uses [goldwasher-needle](https://www.npmjs.org/package/goldwasher-needle) for requests.
 
 ## Installation
-This module installs as a module on AWS Lambda, as a zip file.
+This module installs as a module on AWS Lambda, as a zip file. You can either just download the zip from ```/dist``` and upload it via your AWS console or install it via aws-cli. The first one might not always work so the method with aws-cli described below is recommended:
 ```
 npm install goldwasher-aws-lambda
 cd node_modules/goldwasher-aws-lambda/dist/
@@ -24,9 +24,23 @@ If you later need to overwrite it and the function name already exists on AWS, u
 aws lambda update-function-code --function-name goldwasher --zip-file fileb://goldwasher-aws-lambda.zip
 ```
 
+## Options
+The module accepts the usual parameters of [goldwasher-needle](https://www.npmjs.org/package/goldwasher-needle) with the exception that the ```url``` and ```options``` parameters have been merged. This simply means that the first parameter, ```url```, has been removed and must instead be added as a property on the ```options``` parameter:
+```javascript
+var options = {
+  url: 'http://github.com',
+  goldwasher: {
+    selector: 'h1'
+  }
+}
+```
+See how to do this in the examples below.
+
 ## Build
 If you feel like changing the code and have installed the development dependencies, you can automatically build a new zip file from the main folder:
 ```
 gulp zip
 ```
 This will create a new zip that can be installed with the commands mentioned under *installation*.
+
+## Example
