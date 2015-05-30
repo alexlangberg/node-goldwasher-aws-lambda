@@ -1,1 +1,1 @@
-module.exports = require('./lib/goldwasher-needle.js');
+module.exports = require('./lib/goldwasher-aws-lambda.js');

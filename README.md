@@ -1,2 +1,2 @@
 # node-goldwasher-aws-lambda
-A version of goldwasher-needle that runs on AWS Lambda
+A version of goldwasher-needle that runs on AWS Lambda.

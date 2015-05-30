@@ -8,6 +8,7 @@ var batch = require('gulp-batch');
 var betterConsole = require('better-console');
 var jsdoc = require('gulp-jsdoc');
 var jsPaths = ['*.js', 'lib/**/*.js', 'test/**/*.js'];
+var zip = require('gulp-zip');
 
 var test = function(cb) {
   return gulp.src(['lib/**/*.js', 'index.js'])
@@ -60,4 +61,16 @@ gulp.task('coveralls', ['test'], function() {
 gulp.task('jsdoc', function() {
   return gulp.src(['lib/goldwasher-needle.js', 'README.md'])
     .pipe(jsdoc('./docs'));
+});
+
+gulp.task('zip', function() {
+  return gulp.src([
+      'index.js',
+      'lib/**/*.*',
+      'node_modules/goldwasher/**/*.*',
+      'node_modules/goldwasher-needle/**/*.*',
+      'package.json'
+    ], {base: './'})
+    .pipe(zip('goldwasher-aws-lambda.zip'))
+    .pipe(gulp.dest('dist'));
 });

@@ -1,7 +1,7 @@
 {
-  "name": "goldwasher-needle",
-  "version": "1.1.0",
-  "description": "Plugin for goldwasher to add needle for easy HTTP requests.",
+  "name": "goldwasher-aws-lambda",
+  "version": "0.0.1",
+  "description": "A version of goldwasher-needle that runs on AWS Lambda.",
   "main": "index.js",
   "scripts": {
     "test": "gulp"
@@ -13,7 +13,10 @@
     "statistics",
     "metadata",
     "scraping",
-    "crawling"
+    "crawling",
+    "amazon",
+    "aws",
+    "lambda"
   ],
   "author": "Alex Langberg",
   "license": "MIT",
@@ -22,7 +25,6 @@
     "chai": "^2.3.0",
     "chai-things": "^0.2.0",
     "coveralls": "^2.11.2",
-    "goldwasher": "^5.0.1",
     "gulp": "^3.8.11",
     "gulp-batch": "^1.0.5",
     "gulp-coveralls": "^0.1.4",
@@ -31,35 +33,24 @@
     "gulp-jshint": "^1.11.0",
     "gulp-mocha": "^2.1.0",
     "gulp-spawn-mocha": "^2.0.1",
+    "gulp-zip": "^3.0.2",
     "istanbul": "^0.3.14",
     "jshint-stylish": "^2.0.0",
-    "mocha": "^2.2.4",
-    "ramda": "^0.14.0"
-  },
-  "config": {
-    "blanket": {
-      "pattern": [
-        "node-goldwasher/lib"
-      ]
-    }
+    "mocha": "^2.2.4"
   },
   "directories": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexlangberg/node-goldwasher-needle.git"
+    "url": "https://github.com/alexlangberg/node-goldwasher-aws-lambda.git"
   },
   "bugs": {
-    "url": "https://github.com/alexlangberg/node-goldwasher-needle/issues"
+    "url": "https://github.com/alexlangberg/node-goldwasher-aws-lambda/issues"
   },
-  "homepage": "https://github.com/alexlangberg/node-goldwasher-needle",
+  "homepage": "https://github.com/alexlangberg/node-goldwasher-aws-lambda",
   "dependencies": {
-    "needle": "^0.9.2",
-    "ramda": "^0.14.0",
-    "retry": "^0.6.1"
-  },
-  "peerDependencies": {
-    "goldwasher": ">= 4.x"
+    "goldwasher": "^5.0.2",
+    "goldwasher-needle": "^1.1.0"
   }
 }
