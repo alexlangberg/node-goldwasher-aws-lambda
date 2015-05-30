@@ -69,7 +69,8 @@ gulp.task('zip', function() {
       'lib/**/*.*',
       'node_modules/goldwasher/**/*.*',
       'node_modules/goldwasher-needle/**/*.*',
-      'package.json'
+      'package.json',
+      'README.md'
     ], {base: './'})
     .pipe(zip('goldwasher-aws-lambda.zip'))
     .pipe(gulp.dest('dist'));
