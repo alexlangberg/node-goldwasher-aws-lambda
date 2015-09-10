@@ -1,6 +1,6 @@
 {
   "name": "goldwasher-aws-lambda",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A version of goldwasher that runs as a module on AWS Lambda.",
   "main": "index.js",
   "scripts": {
