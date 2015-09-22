@@ -22,7 +22,7 @@
   "license": "MIT",
   "devDependencies": {
     "better-console": "^0.2.4",
-    "chai": "^3.2.0",
+    "chai": "^3.3.0",
     "chai-things": "^0.2.0",
     "coveralls": "^2.11.2",
     "gulp": "^3.8.11",
@@ -34,9 +34,9 @@
     "gulp-mocha": "^2.1.0",
     "gulp-spawn-mocha": "^2.0.1",
     "gulp-zip": "^3.0.2",
-    "istanbul": "^0.3.14",
+    "istanbul": "^0.3.20",
     "jshint-stylish": "^2.0.0",
-    "mocha": "^2.2.4"
+    "mocha": "^2.3.3"
   },
   "directories": {
     "test": "test"
@@ -50,6 +50,6 @@
   },
   "homepage": "https://github.com/alexlangberg/node-goldwasher-aws-lambda",
   "dependencies": {
-    "goldwasher-needle": "^2.0.0"
+    "goldwasher-needle": "^2.0.3"
   }
 }
